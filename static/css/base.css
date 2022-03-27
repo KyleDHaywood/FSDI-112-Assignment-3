@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(140deg, #e3fd85, #bbfb72);
+  color: rgb(54, 68, 30);
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+nav {
+  font-size: 1.5rem;
+}
+
+nav,
+form {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  background: white;
+  border: none;
+}
+
+form button {
+  color: #a7e660;
+  background-color: white;
+  border-left: #a7e660 solid 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #a7e660;
+  color: white;
+}
+
+/* Todo list */
+.post-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-list {
+  min-width: 25%;
+  list-style: none;
+}
+
+.post {
+  margin: 0.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Button */
+
+.delete-btn,
+.complete-btn {
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.complete-btn {
+  background-color: #60e672;
+}
+
+.delete-btn {
+  color: #e66960;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}

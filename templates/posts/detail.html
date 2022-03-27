@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block title %} {{post.title}} {% endblock title %}
+{% block content %}
+<h1>{{post.title}}</h1>
+<p>{{post.text}}</p>
+<a class="back-btn" href="{% url 'posts_list' %}"
+  ><i class="fas fa-step-backward fa-lg"></i></i
+></a>
+ | 
+
+<a class="edit-btn" href="{% url 'post_edit' post.id %}"
+  ><i class="fas fa-pen fa-lg"></i
+></a>
+ | 
+<a class="delete-btn" href="{% url 'post_delete' post.id %}"
+  ><i class="fas fa-trash fa-lg"></i
+></a>
+
+{% endblock content %}
