@@ -4,16 +4,15 @@
 <h1>Posts</h1>
 <div class="post-container"></div>
 {% for post in post_list %}
-<div class="card post-list">
-  <div class="card-body post">
-    <h5 class="card-title">Post #{{post.id}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{post.title}}</h6>
-    <p class="card-text">{{post.text|truncatechars:385}}</p>
-    <a href="{% url 'post_detail' post.id %}" class="card-link"
-      >Continue reading...</a
-    >
+<div class="card">
+  <h5 class="card-header">Featured</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.text|truncatechars_html:385}}</p>
+    <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Continue reading...</a>
   </div>
 </div>
+
 </div>
 {% endfor %}
 {% endblock content %}

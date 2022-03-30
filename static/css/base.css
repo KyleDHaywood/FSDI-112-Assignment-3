@@ -6,13 +6,18 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(140deg, #e3fd85, #bbfb72);
-  color: rgb(54, 68, 30);
+  background-image: url("../img/background-wall.jpg");
+  background-size: cover;
+  /* background: linear-gradient(140deg, #e3fd85, #bbfb72); */
+  /* color: rgb(54, 68, 30); */
   font-family: "Arial Narrow", Arial, sans-serif;
+  color:white
 }
-
+p{
+  color: white;
+}
 nav {
-  font-size: 1.5rem;
+  font-size: 4.5rem;
 }
 
 nav,

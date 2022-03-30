@@ -1,4 +1,4 @@
-{% extends base.html %}
+{% extends 'base.html' %}
 
 {% block title %}Log In{% endblock title %}
 
@@ -6,7 +6,7 @@
     <h1>Log in</h1>
     <form method="POST">
         {% csrf_token %}
-        {{form.as_ap }}
-        <input type='submmit' value='Log In' class='btn btn success'
+        {{form.as_p }}
+        <input type='submit' value='Sign Up' class='btn btn success'/>
     </form>
 {% endblock content %}
