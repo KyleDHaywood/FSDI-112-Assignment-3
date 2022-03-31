@@ -2,6 +2,13 @@ from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 
+
+class Theme(models.Model):
+    description = models.CharField(max_length=512)
+
+    def __str__(self):
+        return self.description
+
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=128)
@@ -11,6 +18,10 @@ class Post(models.Model):
     )
     text = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
+    theme = models.ForeignKey(
+        Theme,
+        on_delete=models.CASCADE
+    )
 
     def __str__(self):
         return self.title

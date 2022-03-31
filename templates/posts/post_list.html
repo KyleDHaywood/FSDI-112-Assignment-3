@@ -7,7 +7,9 @@
 <div class="card">
   <h5 class="card-header">Featured</h5>
   <div class="card-body">
-    <h5 class="card-title">{{post.title}}</h5>
+    <h5 class="card-title">
+      <a href="{% url 'post_detail' post.id %}"/>{{post.title}}</h5>
+    <small>{{post.theme}}</small>
     <p class="card-text">{{post.text|truncatechars_html:385}}</p>
     <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Continue reading...</a>
   </div>
